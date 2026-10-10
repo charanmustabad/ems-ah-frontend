@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const User = require('../models/User');
 const Exercise = require('../models/Exercise');
 const Workout = require('../models/Workout');
@@ -178,3 +178,4 @@ async function seedDefaultData() {
 }
 
 module.exports = { DEFAULT_USERS, seedDefaultData };
+

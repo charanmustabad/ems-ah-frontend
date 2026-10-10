@@ -2,7 +2,7 @@ const User = require('../models/User');
 const Workout = require('../models/Workout');
 const Exercise = require('../models/Exercise');
 const WorkoutLog = require('../models/WorkoutLog');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const { successResponse, errorResponse } = require('../utils/response');
 
 const sanitizeUser = (user) => ({
@@ -172,3 +172,4 @@ exports.getStatistics = async (req, res, next) => {
     next(error);
   }
 };
+

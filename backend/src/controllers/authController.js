@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const User = require('../models/User');
 const { generateToken } = require('../utils/token');
 const { successResponse, errorResponse } = require('../utils/response');
@@ -102,3 +102,4 @@ exports.getMe = async (req, res) => {
 exports.logout = async (req, res) => {
   return successResponse(res, 200, 'Logout successful', {});
 };
+
